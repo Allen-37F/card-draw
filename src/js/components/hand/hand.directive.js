@@ -8,9 +8,11 @@
 
     function HandDirective () {
       return {
+        scope: {},
         restrict: 'E',
         controller: 'HandController',
-        template: '<p>hellll yeah</p>'
+        controllerAs: 'vm',
+        templateUrl: './js/components/hand/hand.html'
       }
     }
 })()

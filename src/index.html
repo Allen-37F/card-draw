@@ -2,7 +2,7 @@
 <html lang="en" ng-app="CardDrawApp">
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Card Draw Application</title>
     <!-- styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="col s6">
-          <deck></deck>
+          <cd-deck></cd-deck>
         </div>
       </div>
     </div>
@@ -28,9 +28,16 @@
     <!-- load application -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
+
+    <!-- 'hand' config -->
     <script type="text/javascript" src="js/components/hand/hand.config.js"></script>
     <script type="text/javascript" src="js/components/hand/hand.directive.js"></script>
     <script type="text/javascript" src="js/components/hand/hand.service.js"></script>
     <script type="text/javascript" src="js/components/hand/hand.controller.js"></script>
+
+    <!-- 'deck' config -->
+    <script type="text/javascript" src="js/components/deck/deck.config.js"></script>
+    <script type="text/javascript" src="js/components/deck/deck.directive.js"></script>
+    <script type="text/javascript" src="js/components/deck/deck.controller.js"></script>
   </body>
 </html>

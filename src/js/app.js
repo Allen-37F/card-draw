@@ -7,7 +7,8 @@
   angular
     .module('CardDrawApp', [
       'CardDrawApp.config',
-      'CardDrawApp.components.hand'
+      'CardDrawApp.components.hand',
+      'CardDrawApp.components.deck'
     ]);
 
 })();

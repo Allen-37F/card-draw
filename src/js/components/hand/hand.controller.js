@@ -7,6 +7,7 @@
   HandController.$inject = ['HandService']
 
   function HandController (HandService) {
+    this.hand = HandService.hand
     HandService.draw()
   }
 })()

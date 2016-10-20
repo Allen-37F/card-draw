@@ -49,7 +49,7 @@ gulp.task('style', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('./src/js/**/*.js', ['jshint', 'javascript', 'style']);
+  gulp.watch('./src/js/**/*.js', ['javascript']);
   gulp.watch(['./src/*.html'], ['html']);
   gulp.watch(['./src/css/*.css'], ['css']);
 });
@@ -57,6 +57,8 @@ gulp.task('watch', () => {
 // *** defailt task *** //
 gulp.task('default', () => {
   runSequence(
+    // bye stupid linter
+    // bye stupid style thing
     ['watch'],
     ['connect']
   );

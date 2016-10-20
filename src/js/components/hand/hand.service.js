@@ -11,12 +11,24 @@
 
   function HandService ($http) {
     this.deck = []
+    this.hand = []
+
     this.draw = () => {
-      // Get the deck and its id
-      // Make another request to get all the cards back
-      $http.get(baseUrl + newDeckPath).then(({ data: { cards }}) => {
-        console.log(cards);
-      })
+      if (!this.deck.length) {
+        return $http.get(baseUrl + newDeckPath)
+          .then(({ data: { cards }}) => {
+            this.deck = cards
+            drawACard.call(this) // .bind, .apply, .call
+          })
+      } else {
+        drawACard.call(this)
+      }
+    }
+
+    function drawACard () {
+      let selectedCard = this.deck.pop()
+      this.hand.push(selectedCard)
+      console.log(this.deck.length, this.hand)
     }
   }
 })()
